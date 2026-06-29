@@ -12,27 +12,26 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-gray-800">
+<body class="bg-gray-950">
 
   <main class="max-w mx-auto">
     <!-- Header -->
-       <header class="sticky top-0 bg-gray-950 shadow-lg py-6">
-          <div class="flex flex-col sm:flex-row sm:items-center">
-               <img src="images/github.png" class="p-4 w-16 h-16" alt="Github Logo">
+       <header class="sticky top-0 bg-slate-950 shadow-lg py-2 z-50">
+          <div class="flex flex-col md:flex-row justify-center items-center">
+               <a href="#">
+                    <img src="images/github.png" class="w-12 md:ml-0 ml-4 transition duration-200 opacity-75 hover:opacity-100 hover:scale-110" alt="Github Logo">
+               </a>
 
-               <div class="ml-10 mr-10">
-                    <h1 class="text-4xl font-bold text-green-50 mt-2 mb-2 leading-relaxed">
+               <div class="ml-4 mr-10">
+                    <a class="text-4xl font-bold text-green-50 leading-relaxed
+                    hover:text-green-500 transition transition-time-200" href="#">
                          Git & GitHub
-                    </h1>
-
-                    <p class="text-sm text-gray-400 font-light mt-2 leading-relaxed max-w-3xl">
-                         Created by Landon Wardle for TCSS 460
-                    </p>
+                    </a>
                </div>
 
                <!-- Navigation -->
                <nav class="flex flex-wrap gap-3 text-sm font-semibold
-           border-t border-slate-950 pt-4">
+           border-t border-slate-950">
                     <a href="#" class="bg-black text-green-500 px-4 py-2
                     rounded-lg hover:bg-gray-800">
                          Overview
@@ -55,28 +54,34 @@
 
                     <a href="#form" class="bg-black text-green-500 px-4 py-2
                     rounded-lg hover:bg-gray-800">
-                         Contact Me
+                         Contact
                     </a>
                </nav>
           </div>
        </header>
 
-       <div class="max-w-6xl mx-auto mt-6">
+       <div class="lg:max-w-6xl mx-auto mt-6 px-4">
           <!-- What are Git and GitHub? -->
-          <section id="overview" class="grid gap-6 md:grid-cols-2">
-               <div class="bg-gray-950 rounded-xl border border-green-900
-               p-6 mb-6 text-left">
+          <header id="overview" class="text-5xl font-black uppercase text-transparent
+               bg-clip-text bg-gradient-to-r from-green-500 to-green-400 mb-5 scroll-mt-16 ml-2">
+            Overview
+          </header>
+
+          <section class="grid gap-6 md:grid-cols-2">
+               <div class="bg-gray-900 hover:bg-gray-950 rounded-xl hover:border border-green-900
+               p-6 mb-6 text-left transition transition-time-200">
                     <h2 class="text-3xl font-bold text-green-500 mb-6">
                          What are Git and GitHub?
                     </h2>
 
                     <p class="text-gray-50 mx-auto leading-relaxed mb-5">
                          Git is a distributed version control system that tracks changes in files and coordinates work among multiple developers.
-                         GitHub is a <span class="font-bold italic text-green-400">web-based platform</span> that hosts Git repositories and provides additional collaboration features.
+                         GitHub is a <span class="font-bold italic text-green-500">web-based platform</span> that hosts Git repositories and provides additional collaboration features.
                     </p>
                </div>
                <!-- Why it matters -->
-               <div class="bg-gray-900 rounded-x1 shadow-lg border border-slate-950 p-6 mb-6 rounded-lg">
+               <div class="bg-gray-900 hover:bg-gray-950 rounded-xl hover:border border-green-900
+               p-6 mb-6 text-left transition transition-time-200">
                     <h2 class="text-2xl font-bold text-green-500 mb-3">
                          Why Git and GitHub Matter
                     </h2>
@@ -89,11 +94,15 @@
                </div>
           </section>
 
+          <header id="concepts" class="text-5xl font-black uppercase text-transparent
+          bg-clip-text bg-gradient-to-r from-green-500 to-green-400 mb-5 scroll-mt-16 ml-2">
+            Key Concepts
+          </header>
 
           <!-- Key Concepts Cards -->
-          <section id="concepts" class="scroll-mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-3 mb-6">
+          <section class="grid gap-6 md:grid-cols-2 lg:grid-cols-3 mb-6">
                <article class="bg-gray-900 rounded-xl shadow border border-purple-900
-               p-6 hover:shadow-xl transition duration-200">
+               p-6 hover:shadow-xl transition duration-200 hover:scale-105">
                     <span class="inline-block bg-purple-100 text-purple-700 text-sm
                     font-semibold px-3 py-1 rounded-full mb-4">
                          Concept 1
@@ -110,13 +119,13 @@
                </article>
 
                <article class="bg-gray-900 rounded-xl shadow border border-green-900
-               p-6 hover:shadow-xl transition duration-200">
+               p-6 hover:shadow-xl transition duration-200 hover:scale-105">
                     <span class="inline-block bg-green-100 text-green-700 text-sm
                     font-semibold px-3 py-1 rounded-full mb-4">
                          Concept 2
                     </span>
 
-                    <h3 class="text-xl font-bold text-green-400 mb-6">
+                    <h3 class="text-xl font-bold text-green-500 mb-6">
                          Commit History
                     </h3>
 
@@ -127,7 +136,7 @@
                </article>
 
                <article class="bg-gray-900 rounded-xl shadow border border-blue-900
-               p-6 hover:shadow-xl transition duration-200">
+               p-6 hover:shadow-xl transition duration-200 hover:scale-105">
                     <span class="inline-block bg-blue-100 text-blue-700 text-sm
                     font-semibold px-3 py-1 rounded-full mb-4">
                          Concept 3
@@ -145,11 +154,13 @@
           </section>
 
            <!-- Image Gallery -->
-          <section id="images" class="bg-gray-900 rounded-x1 shadow-lg border border-slate-950 p-6 mb-6 rounded-lg">
-               <h2 class="text-2xl font-bold text-green-500 mb-3">
-                    Image Examples
-               </h2>
 
+          <header id="images" class="text-5xl font-black uppercase text-transparent
+          bg-clip-text bg-gradient-to-r from-green-500 to-green-400 mb-5 scroll-mt-16 ml-2">
+            Images
+          </header>
+
+          <section class="bg-gray-900 rounded-x1 shadow-lg border border-slate-950 p-6 mb-6 rounded-lg">
                <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3 mb-6">
                     <article class="bg-gray-900 rounded-xl border border-purple-900
                     p-6 hover:shadow-xl transition duration-200">
@@ -193,8 +204,13 @@
                </div>
           </section>
 
+          <header id="resources" class="text-5xl font-black uppercase text-transparent
+               bg-clip-text bg-gradient-to-r from-green-500 to-green-400 mb-5 scroll-mt-16 ml-2">
+               Resources
+          </header>
+
           <!-- Video resource section -->
-          <section id="resources" class="grid gap-6 md:grid-cols-2 lg:grid-cols-2 mb-6">
+          <section class="grid gap-6 md:grid-cols-2 lg:grid-cols-2 mb-2">
                <div class="bg-gray-900 rounded-xl border border-slate-950
                p-6 mb-6">
                     <span class="inline-block bg-green-100 text-green-700 text-sm font-semibold px-3 py-1 rounded-full mb-4">
@@ -211,7 +227,7 @@
                     </p>
 
                     <div class="flex bg-gray-950 rounded-xl border border-green-900">
-                         <div class="ml-5 mt-2 mb-10">
+                         <div class="flex flex-col items-center mx-auto my-4">
                               <h2 class="text-2xl font-bold text-white mb-3">
                                    YouTube Video Resource
                               </h2>
@@ -273,14 +289,14 @@
                </section>
           </section>
 
-          <section id="form">
+          <header id="form" class="text-5xl font-black uppercase text-transparent
+          bg-clip-text bg-gradient-to-r from-green-500 to-green-400 mb-5 scroll-mt-16 ml-2">
+               Contact Me
+          </header>
+
+          <section>
                <!-- Form Card -->
                <section class="bg-slate-950 rounded-xl shadow-lg border border-green-900 p-8">
-
-                    <h2 class="text-2xl font-bold text-green-500 mb-6">
-                         Contact Me
-                    </h2>
-
                     <form action="https://httpbin.org/get" method="get" class="space-y-8">
                          <!-- Section 1: Contact Information -->
                          <fieldset class="border border-purple-400  rounded-xl p-5">
@@ -361,14 +377,14 @@
 
                          <!-- Section 2: Request Details -->
                          <fieldset class="border border-green-400 rounded-xl p-5">
-                              <legend class="text-lg font-bold text-green-400 px-2">
+                              <legend class="text-lg font-bold text-green-500 px-2">
                                    2. Request Details
                               </legend>
 
                               <div class="grid gap-5 md:grid-cols-2 mt-4">
 
                                    <div>
-                                        <label for="reason" class="block text-sm font-semibold text-green-400 mb-1">
+                                        <label for="reason" class="block text-sm font-semibold text-green-500 mb-1">
                                              Reason for Contact
                                         </label>
                                         <select
@@ -388,7 +404,7 @@
                                    </div>
 
                                    <div>
-                                        <label for="meetingDate" class="block text-sm font-semibold text-green-400 mb-1">
+                                        <label for="meetingDate" class="block text-sm font-semibold text-green-500 mb-1">
                                              Preferred Meeting Date
                                         </label>
                                         <input
@@ -396,9 +412,10 @@
                                                 id="meetingDate"
                                                 name="meetingDate"
                                                 required
-                                                class="w-full text-white border border-green-400 rounded-lg px-4 py-2 bg-black focus:outline-none focus:ring-2 focus:ring-green-400">
+                                                class="w-full text-white border border-green-400 rounded-lg px-4 py-2 bg-black
+                                                focus:outline-none focus:ring-2 focus:ring-green-400 [color-scheme:dark]">
                                         <p class="text-xs text-slate-400 mt-1">
-                                             Required date field.
+                                             Required date.
                                         </p>
                                    </div>
 
@@ -493,7 +510,7 @@
                          <div class="flex flex-col sm:flex-row gap-3 justify-end">
                               <button
                                       type="reset"
-                                      class="px-6 py-3 rounded-lg border border-gray-300 text-white font-semibold hover:bg-gray-100 transition duration-200">
+                                      class="text-red-500 px-6 py-3 rounded-lg border border-red-500 text-red font-semibold hover:bg-red-950 transition duration-200">
                                    Reset
                               </button>
 
