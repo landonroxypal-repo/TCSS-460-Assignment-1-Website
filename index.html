@@ -6,7 +6,7 @@
   <!-- Makes the page responsive on different screen sizes -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Exercise 1 - Mini Tutorial Page</title>
+  <title>Assignment 1 - Tailwind One-Pager Site</title>
 
   <!-- Tailwind CDN for learning and prototyping -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -16,17 +16,20 @@
 
   <main class="max-w mx-auto">
     <!-- Header -->
-       <header class="sticky top-0 bg-slate-950 shadow-lg py-2 z-50">
-          <div class="flex flex-col md:flex-row justify-center items-center">
-               <a href="#">
-                    <img src="images/github.png" class="w-12 md:ml-0 ml-4 transition duration-200 opacity-95 hover:opacity-100 hover:scale-110" alt="Github Logo">
-               </a>
-
-               <div class="ml-4 mr-10">
-                    <a class="text-4xl font-bold text-green-50 leading-relaxed
-                    hover:text-green-500 transition transition-time-200" href="#">
-                         Git & GitHub
+       <header class="lg:p-6 sticky top-0 bg-slate-950 shadow-lg py-2 z-50 flex justify-center">
+          <div class="lg:max-w-6xl flex flex-col lg:flex-row items-center place-content-between">
+               <div class="flex flex-row items-center">
+                    <a href="#">
+                         <img src="images/github.png" class="w-12 md:ml-0 ml-4 transition duration-200 opacity-95
+                         hover:opacity-100 hover:scale-110" alt="Github Logo">
                     </a>
+
+                    <div class="ml-4 mr-10">
+                         <a class="text-4xl font-bold text-green-50 leading-relaxed
+                    hover:text-green-500 transition transition-time-200" href="#">
+                              Git & GitHub
+                         </a>
+                    </div>
                </div>
 
                <!-- Navigation -->
@@ -62,9 +65,9 @@
 
        <div class="lg:max-w-6xl mx-auto mt-6 px-4">
           <!-- What are Git and GitHub? -->
-          <section class="flex md:flex-col items-center lg:flex-row bg-gray-900 rounded-xl shadow-lg borderborder-green-900
+          <section class="flex flex-col-reverse lg:flex-row items-center bg-gray-900 rounded-xl shadow-lg borderborder-green-900
                p-6 mb-6 text-left">
-               <div class="flex flex-col justify-center items-center">
+               <div class="flex flex-col lg:max-w-xl items-center lg:items-start">
                     <h2 class="text-3xl font-bold text-green-200 mb-6 bg-black rounded-lg p-2">
                          TCSS 460: One-Pager Site
                     </h2>
@@ -78,11 +81,11 @@
                          Version control and collaboration tools are crucial tools for software development. 
                          Git is a distributed version control system that tracks changes in files and coordinates work among multiple developers. 
                          GitHub is built on top of Git's technology, and is a web-based platform that hosts Git repositories and provides 
-                         additional collaboration features. Git and Github are widely used in the software development industry, and 
+                         additional collaboration features. Git and GitHub are widely used in the software development industry, and
                          are essential tools for managing code and collaborating with others.
                     </p>
 
-                    <div class="flex flex-row items-center justify-center gap-4 p-2">
+                    <div class="flex flex-row object-fill gap-4 p-2">
                          <a href="#overview" class="text-green-500 hover:text-green-400 font-semibold">
                               <button
                                    class="px-6 py-3 rounded-lg bg-green-600 text-white font-semibold hover:bg-green-700 transition duration-200 mb-5">
@@ -97,7 +100,9 @@
                          </a>
                     </div>    
                </div>
-               <img src="images/Github.png" alt="GitHub logo" class="rounded-full mx-6 bg-slate-950 border border-green-500">
+               <div class="m-6 flex flex-col justify-center items-center max-w-md">
+                    <img src="images/Github.png" alt="GitHub logo" class="rounded-full bg-slate-950 border border-green-500">
+               </div>
           </section>
 
           <header id="overview" class="text-5xl font-black uppercase text-transparent
